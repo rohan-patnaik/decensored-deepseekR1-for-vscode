@@ -42,5 +42,11 @@
   },
   "dependencies": {
     "ollama": "^0.5.13"
+  },
+  
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rohan-patnaik/decensored-deepseekR1-for-vscode"
   }
+  
 }
