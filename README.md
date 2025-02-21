@@ -1,6 +1,6 @@
-# Uncensored DeepseekR1 for VSCode
+# Decensored DeepseekR1 for VSCode
 
-Uncensored DeepseekR1 for VSCode transforms Visual Studio Code into your local AI-powered chat assistant. Powered by Deepseek R1 and Ollama, this extension lets you interact with a locally running AI model right from your editor.
+Decensored DeepseekR1 for VSCode transforms Visual Studio Code into your local AI-powered chat assistant. Powered by Deepseek R1-1776 from perplexity.ai and Ollama, this extension lets you interact with a locally running AI model right from your editor.
 
 ## Features
 
