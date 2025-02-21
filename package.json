@@ -1,7 +1,8 @@
 {
-  "name": "uncensored-deepseekr1-for-vscode",
-  "displayName": "Uncensored DeepseekR1 for VScode",
-  "description": "An uncensored Deepseek R1 extension for VS Code open sourced by perplexity.ai to be used with vscode as an extension",
+  "name": "decensored-deepseekr1-for-vscode",
+  "publisher": "rohan-patnaik",
+  "displayName": "Decensored DeepseekR1 for VScode",
+  "description": "A decensored Deepseek R1 extension for VS Code open sourced by perplexity.ai to be used with vscode as an extension.",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.84.2"
