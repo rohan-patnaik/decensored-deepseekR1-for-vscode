@@ -25,6 +25,7 @@ Decensored DeepseekR1 for VSCode transforms Visual Studio Code into our personal
 You can get the guide from https://medium.com/@rohanpatnaik1997/how-to-run-a-hugging-face-gguf-model-locally-ollama-on-our-windows-machine-1c79b45e483a
 on how to download a custom GGUF model from Hugging Face and integrate it with Ollama so we can use it in our VSCode extension.
 
+---
 
 ## Using the VSCode Extension
 
