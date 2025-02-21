@@ -4,34 +4,31 @@ import ollama from 'ollama';
 export function activate(context: vscode.ExtensionContext) {
   console.log('Deepseek extension activated');
 
-  // Register a command that opens the chat panel
-  let disposable = vscode.commands.registerCommand('uncensored-deepseekr1-for-vscode.chico', async () => {
-    // Create and show a new webview panel when the command is executed
+  let disposable = vscode.commands.registerCommand('decensored-deepseekr1-for-vscode.chico', async () => {
     const panel = vscode.window.createWebviewPanel(
-      'deepChat',            // Identifies the type of the webview.
-      'Uncensored Deepseek R1-1776',       // Title of the panel displayed to the user.
-      vscode.ViewColumn.One, // Editor column to show the new webview panel in.
-      { enableScripts: true } // Enable scripts in the webview.
+      'deepChat',
+      'Decensored Deepseek R1-1776',
+      vscode.ViewColumn.One,
+      { enableScripts: true }
     );
 
-    // Set the webview's HTML content
     panel.webview.html = getWebviewContent();
 
-    // Listen for messages from the webview
     panel.webview.onDidReceiveMessage(async (message: any) => {
       if (message.command === 'chat') {
         const userPrompt = message.text;
         let responseText = '';
 
         try {
-          // Call Ollama with streaming enabled to chat with Deepseek R1.
+          // Call Ollama with streaming enabled to chat with Deepseek R1 or other models here
           const streamResponse = await ollama.chat({
-            model: 'deepseek-coder:6.7b',
+            model: 'deepseek-coder:6.7b', 
+            // model: 'deepseek-r1_decensor_v1-gguf',
+            // model: 'dolphin-mixtral_v1-gguf',
             messages: [{ role: 'user', content: userPrompt }],
             stream: true
           });
 
-          // Accumulate chunks from the stream and send updates to the webview.
           for await (const part of streamResponse) {
             responseText += part.message.content;
             panel.webview.postMessage({
@@ -49,9 +46,6 @@ export function activate(context: vscode.ExtensionContext) {
   context.subscriptions.push(disposable);
 }
 
-/**
- * Returns the HTML content displayed in the webview panel.
- */
 function getWebviewContent(): string {
   return /*html*/`
     <!DOCTYPE html>
@@ -59,14 +53,14 @@ function getWebviewContent(): string {
     <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-      <title>Uncensored Deepseek R1</title>
+      <title>Decensored Deepseek R1</title>
       <style>
         body {
           font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
           background: #1e1e1e;
           color: #d4d4d4;
           margin: 0;
-          padding: 0; /* Remove default padding to let content stretch */
+          padding: 0;
         }
         .container {
           width: 97.8%;
@@ -118,7 +112,7 @@ function getWebviewContent(): string {
     </head>
     <body>
       <div class="container">
-        <h1>Uncensored Deepseek</h1>
+        <h1>Decensored Deepseek</h1>
         <div class="input-group">
           <input type="text" id="prompt" placeholder="What's on your mind today?" />
           <button id="askBtn">Ask</button>
@@ -127,28 +121,23 @@ function getWebviewContent(): string {
       </div>
 
       <script>
-        // Acquire the VS Code API object.
         const vscode = acquireVsCodeApi();
 
-        // A helper function to send the prompt to the extension.
         function sendPrompt() {
           const text = document.getElementById('prompt').value;
           vscode.postMessage({ command: 'chat', text });
         }
 
-        // Send prompt on button click.
         document.getElementById('askBtn').addEventListener('click', () => {
           sendPrompt();
         });
 
-        // Also send prompt when Enter is pressed in the input.
         document.getElementById('prompt').addEventListener('keydown', (event) => {
           if (event.key === 'Enter') {
             sendPrompt();
           }
         });
 
-        // Listen for messages from the extension to update the response area.
         window.addEventListener('message', event => {
           const { command, text } = event.data;
           if (command === 'chatResponse') {

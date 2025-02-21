@@ -10,13 +10,13 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:uncensored-deepseekr1-for-vscode.chico"
+    "onCommand:decensored-deepseekr1-for-vscode.chico"
   ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "uncensored-deepseekr1-for-vscode.chico",
+        "command": "decensored-deepseekr1-for-vscode.chico",
         "title": "Open Deepseek Chat"
       }
     ]
