@@ -19,8 +19,6 @@ Decensored DeepseekR1 for VSCode transforms Visual Studio Code into our personal
 - **Visual Studio Code:** Version 1.84.2 (or later, if we upgrade).
 - **Ollama:** Installed and configured on our system.
 - **Node.js:** Installed on our system.
-- **Internet Access:** For downloading GGUF models from Hugging Face.
-- **Basic Command Line Knowledge:** To execute commands for model download and registration.
 
 ---
 
@@ -44,8 +42,7 @@ Once our custom model is registered and running, we can use the extension as fol
 
 ---
 
-Enjoy the freedom of open-source AI directly in our code editor! Customize our personal AI assistant by downloading and integrating our favorite models with Ollama and Decensored DeepseekR1 for VSCode.
-
-For more information, troubleshooting tips, and contributions, please visit our repository and documentation.
+Enjoy the freedom of decensored open-source AI directly in our code editor! 
+Customize our personal AI assistant by downloading and integrating your favorite models with 'Decensored DeepseekR1' for VSCode.
 
 ---
