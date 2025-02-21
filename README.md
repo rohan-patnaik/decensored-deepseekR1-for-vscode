@@ -1,6 +1,3 @@
-Below is the updated README with "our" replacing "your" where appropriate and the release notes section removed:
-
----
 
 # Decensored DeepseekR1 for VSCode
 
