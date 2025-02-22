@@ -43,7 +43,6 @@ Once our custom model is registered and running, we can use the extension as fol
 
 ---
 
-Enjoy the freedom of decensored open-source AI directly in our code editor! 
-Customize our personal AI assistant by downloading and integrating your favorite models with 'Decensored DeepseekR1' for VSCode.
+Enjoy the freedom of decensored open-source AI directly in your code editor! 
 
 ---
