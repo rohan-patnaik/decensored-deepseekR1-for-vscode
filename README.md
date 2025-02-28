@@ -1,6 +1,8 @@
 
 # Decensored DeepseekR1 for VSCode
 
+Download the extension here: [Link](https://marketplace.visualstudio.com/items?itemName=rohan-patnaik.decensored-deepseekr1-for-vscode)
+
 Decensored DeepseekR1 for VSCode transforms Visual Studio Code into our personal, local AI-powered chat assistant. This open-source extension leverages Deepseek R1-1776 from perplexity.ai, Ollama’s streaming API, and the flexibility to use custom GGUF models downloaded from Hugging Face. Now we can create and run our own local AI models right from the editor!
 
 ---
