@@ -3,7 +3,7 @@
   "publisher": "rohan-patnaik",
   "displayName": "Decensored DeepseekR1 for VScode",
   "description": "A decensored Deepseek R1 extension for VS Code open sourced by perplexity.ai to be used with vscode as an extension.",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "engines": {
     "vscode": "^1.84.2"
   },
