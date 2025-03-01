@@ -22,8 +22,8 @@ export function activate(context: vscode.ExtensionContext) {
         try {
           // Call Ollama with streaming enabled to chat with Deepseek R1 or other models here
           const streamResponse = await ollama.chat({
-            model: 'deepseek-coder:6.7b', 
-            // model: 'deepseek-r1_decensor_v1-gguf',
+            // model: 'deepseek-coder:6.7b', 
+            model: 'deepseek-r1_decensor_v1-gguf',
             // model: 'dolphin-mixtral_v1-gguf',
             messages: [{ role: 'user', content: userPrompt }],
             stream: true
